@@ -1,0 +1,15 @@
+{
+    "name": "Pulsar-snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "cpp",
+                "path": "./bit.json"
+            },
+            {
+                "language": "rust",
+                "path": "./rs.json"
+            }
+        ]
+    }
+}

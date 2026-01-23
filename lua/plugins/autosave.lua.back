@@ -1,0 +1,26 @@
+return {
+    {
+        "Pocco81/auto-save.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("auto-save").setup({
+                enabled = true,
+                trigger_events = { "InsertLeave", "TextChanged" }, -- 插入模式离开和文本变化时保存
+                execution_message = {
+                    message = function()
+                        return "" -- 不显示保存消息
+                    end,
+                },
+                debounce_delay = 100, -- 防抖延迟（毫秒）
+                callbacks = {
+                    before_saving = function()
+                        -- 保存前执行的操作
+                    end,
+                    after_saving = function()
+                        -- 保存后执行的操作
+                    end,
+                },
+            })
+        end,
+    },
+}
