@@ -12,6 +12,7 @@ return {
             "--background-index",
             "--clang-tidy",
             "--header-insertion=never", 
+            "-j=22",
           },
         },
       },

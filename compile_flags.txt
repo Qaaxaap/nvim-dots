@@ -3,3 +3,4 @@
 -Wall
 -Wextra
 -Wno-sign-compare
+-j=22
