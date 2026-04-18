@@ -23,7 +23,7 @@ vim.api.nvim_create_autocmd("FileType", {
             vim.cmd("w")
             -- 打开终端并立即进入插入模式
             vim.cmd("belowright 15split")
-            vim.cmd("terminal cd '%:p:h' && g++ -std=c++23 -O2 -fsanitize=address,undefined '%:t' -o '%:r' && ./'%:r'")
+            vim.cmd("terminal cd '%:p:h' && g++ -std=c++23 -O2 -fsanitize=address,undefined '%:t' -o '%:r' && ./'%:r' ; rm ./'%:r'")
             vim.cmd("startinsert") -- 关键：进入插入模式
         end, { buffer = true, desc = "Compile and run code" })
     end,
